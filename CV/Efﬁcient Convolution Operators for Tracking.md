@@ -4,7 +4,8 @@ Martin Danelljan
 
 [paper](https://arxiv.org/pdf/1611.09224.pdf) [project](http://www.cvl.isy.liu.se/research/objrec/visualtracking/ecotrack/index.html) [github](https://github.com/martin-danelljan/ECO)
 
-Abstract
+
+Result
 -----------------------
 极大的提升了Discriminative Correlation Filter(DCF)的速度，同时准确率性能有所提升。
 
@@ -40,3 +41,9 @@ Instead of updating the model in a continuous fashion every frame, we use a spar
 We avoid explicity detecting changes in the objective and simply update the filter by starting optimization process in every Nth frame. （检测changes容易出现问题，直接设置每N次优化一次）
 
 While increasing NS leads to reduced computations, it may also reduce the convergence speed of the optimization, resulting in a less discriminative model.
+
+Abstract
+----------------------------
+In recent years, Discriminative Correlation Filter (DCF) based methods have significantly advanced the state-of-the-art in tracking. However, in the pursuit of ever increasing tracking performance, their characteristic speed and real-time capability have gradually faded. Further, the increasingly complex models, with massive number of trainable parameters, have introduced the risk of severe over-fitting. In this work, we tackle the key causes behind the problems of computational complexity and over-fitting, with the aim of simultaneously improving \emph{both} speed and performance. 
+
+We revisit the core DCF formulation and introduce: (i) a factorized convolution operator, which drastically reduces the number of parameters in the model; (ii) a compact generative model of the training sample distribution, that significantly reduces memory and time complexity, while providing better diversity of samples; (iii) a conservative model update strategy with improved robustness and reduced complexity. We perform comprehensive experiments on four benchmarks: VOT2016, UAV123, OTB-2015, and TempleColor. When using expensive deep features, our tracker provides a 20-fold speedup and achieves a 13.0% relative gain in Expected Average Overlap compared to the top ranked method C-COT in the VOT2016 challenge. Moreover, our fast variant, using hand-crafted features, operates at 60 Hz on a single CPU, while obtaining 65.0% AUC on OTB-2015. 
