@@ -16,7 +16,7 @@ Introduction
 
 此外，图像分类的深度网络大多数还作为其他需要更多详细场景理解的任务的预训练模型，而很高的空间分辨率损失对这些任务而言是非常不利的。 
 
-所以卷积神经网络应用在图像分类中，维护图片空间一定的分辨率是一个很重要的任务。现有算法有以下的做法： `up-convolutions`，`skip connections` 和 `other post-hoc measures`。但是上面的方法会造成图片变形，所以本文提出使用`Dilated Convolutions`方法来解决这个问题。Dilated Convolutions的好处就是既能保持原有网络的感受野（Receptive Field），同时又不会损失图像空间的分辨率（224×224输入的最后卷积层输出特征map是28×28）
+所以卷积神经网络应用在图像分类中，维护图片空间一定的分辨率是一个很重要的任务。现有算法有以下的做法： **up-convolutions**，**skip connections** 和 **other post-hoc measures**。但是上面的方法会造成图片变形，所以本文提出使用**Dilated Convolutions**方法来解决这个问题。Dilated Convolutions的好处就是既能保持原有网络的感受野（Receptive Field），同时又不会损失图像空间的分辨率（224×224输入的最后卷积层输出特征map是28×28）
 
 上面实现过程总结来说就是，假设网络输入为28×28，我们使用padding和stride=1的卷积，卷积filter尺寸都是3×3。 
 1.  输入28*28基础上3×3卷积，也就是经过1-dilated处理，感受野为 3×3，该操作和其他正常卷积操作一样，没有区别； 
@@ -25,7 +25,7 @@ Introduction
 
 由于filter卷积过程stride=1以及依靠padding，最后每层输出的特征map尺寸都依旧保持为28×28，和原图同样的大小。但是我们可以看到，网络无需借助池化层也能增大后续网络的感受野。
 
-`Problem:`
+**Problem:**
 最终输出maps会产生很差的网格状态（gridding artifacts）。作者主要通过Removing max pooling和Adding layers等操作一定程度上改善了最终输出结果。
 
 Abstract
