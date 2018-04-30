@@ -5,7 +5,7 @@ Martin Danelljan
 [paper](https://arxiv.org/pdf/1611.09224.pdf) [project](http://www.cvl.isy.liu.se/research/objrec/visualtracking/ecotrack/index.html) [github](https://github.com/martin-danelljan/ECO)
 
 
-Conclusion
+Work
 -----------------------
 极大的提升了Discriminative Correlation Filter(DCF)的速度，同时准确率性能有所提升。
 
