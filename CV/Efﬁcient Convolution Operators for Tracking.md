@@ -1,4 +1,4 @@
-ECO : Efﬁcient Convolution Operators for Tracking
+ECO : Efficient Convolution Operators for Tracking
 =============================================
 Martin Danelljan
 
@@ -12,8 +12,10 @@ Work
 Contributions
 ---------------------------------------------
 * introduce a factorized convolution operator that dramatically reduces the number of parameters in the DCF model.
-* a compact generative model of training sample space that effectively reduces the number of samples in the learing, while mainting their diversity.
-* introduce an efficient model update strategy, that simulatneously improves tracking speed and robustness.
+
+* a compact generative model of training sample space that effectively reduces the number of samples in the learning, while maintaining their diversity.
+
+* introduce an efficient model update strategy, that simultaneously improves tracking speed and robustness.
 
 C-COT
 ------------------------------------------------
