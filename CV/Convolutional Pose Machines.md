@@ -20,7 +20,7 @@ Shih-En Wei
 
 ## Net Structure
 
-参见论文和blog
+参见[paper](https://arxiv.org/pdf/1602.00134.pdf)和[blog](https://blog.csdn.net/shenxiaolu1984/article/details/51094959)
 
 
 
